@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 07 Feb 2024 pada 10.31
+-- Waktu pembuatan: 07 Feb 2024 pada 16.55
 -- Versi server: 10.4.28-MariaDB
 -- Versi PHP: 8.2.4
 
@@ -496,25 +496,26 @@ INSERT INTO `tb_caleg` (`id_caleg`, `nama_caleg`, `partai`) VALUES
 
 CREATE TABLE `tb_kecamatan` (
   `id_kecamatan` bigint(20) UNSIGNED NOT NULL,
-  `nama_kecamatan` varchar(255) NOT NULL
+  `nama_kecamatan` varchar(255) NOT NULL,
+  `jumlah_pemilih` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data untuk tabel `tb_kecamatan`
 --
 
-INSERT INTO `tb_kecamatan` (`id_kecamatan`, `nama_kecamatan`) VALUES
-(1, 'Bungus Teluk Kabung'),
-(2, 'Lubuk Kilangan'),
-(3, 'Lubuk Begalung'),
-(4, 'Padang Selatan'),
-(5, 'Padang Timur'),
-(6, 'Padang Barat'),
-(7, 'Padang Utara'),
-(8, 'Nanggalo'),
-(9, 'Kuranji'),
-(10, 'Pauh'),
-(11, 'Koto Tangah');
+INSERT INTO `tb_kecamatan` (`id_kecamatan`, `nama_kecamatan`, `jumlah_pemilih`) VALUES
+(1, 'Bungus Teluk Kabung', 19703),
+(2, 'Lubuk Kilangan', 40970),
+(3, 'Lubuk Begalung', 88068),
+(4, 'Padang Selatan', 45152),
+(5, 'Padang Timur', 58250),
+(6, 'Padang Barat', 32989),
+(7, 'Padang Utara', 42252),
+(8, 'Nanggalo', 43445),
+(9, 'Kuranji', 106276),
+(10, 'Pauh', 44871),
+(11, 'Koto Tangah', 144202);
 
 -- --------------------------------------------------------
 
@@ -686,7 +687,17 @@ CREATE TABLE `tb_suara` (
 --
 
 INSERT INTO `tb_suara` (`id_suara`, `id_caleg`, `id_kelurahan`, `id_kecamatan`, `no_tps`, `suara`, `id_user`) VALUES
-(1, 2, 11, 102, 5, 122, 1);
+(1, 1, 94, 11, 1, 12, 1),
+(2, 4, 95, 11, 1, 12, 1),
+(3, 4, 100, 11, 5, 34, 1),
+(4, 12, 104, 11, 6, 400, 1),
+(5, 8, 98, 11, 13, 234, 1),
+(6, 3, 93, 11, 6, 17, 1),
+(7, 2, 95, 11, 5, 19, 1),
+(8, 56, 97, 11, 8, 56, 1),
+(9, 86, 103, 11, 90, 66, 1),
+(10, 102, 102, 11, 4, 14, 1),
+(11, 121, 103, 11, 5, 22, 1);
 
 -- --------------------------------------------------------
 
@@ -796,7 +807,7 @@ ALTER TABLE `tb_partai`
 -- AUTO_INCREMENT untuk tabel `tb_suara`
 --
 ALTER TABLE `tb_suara`
-  MODIFY `id_suara` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_suara` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT untuk tabel `tb_users`
