@@ -4,6 +4,7 @@ include "koneksi.php";
 
 $id = $_GET['id'];
 $data = $conn->query("SELECT
+    a.id_suara,
     a.no_tps,
     c.nama_kelurahan,
     a.suara,
@@ -24,6 +25,7 @@ $list = [];
 foreach($data as $i => $a){
     $list[] = array(
         'key' => $i,
+        'id' => $a['id_suara'],
         'kelurahan' => $a['nama_kelurahan'],
         'nama_caleg' => $a['nama_caleg'],
         'no_tps' => $a['no_tps'],
