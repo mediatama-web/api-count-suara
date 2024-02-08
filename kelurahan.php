@@ -8,8 +8,8 @@ $data = $conn->query("SELECT * FROM tb_kelurahan WHERE id_kecamatan='$id_kecamat
 $list = [];
 foreach($data as $i => $a){
     $list[] = array(
-        'id_kelurahan' => $a['id_kelurahan'],
-        'nama_kelurahan' => $a['nama_kelurahan']
+        'value' => $a['id_kelurahan'],
+        'label' => $a['nama_kelurahan']
     );
 }
 

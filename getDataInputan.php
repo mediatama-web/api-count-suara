@@ -17,7 +17,8 @@ LEFT JOIN tb_kelurahan c ON
 LEFT JOIN tb_caleg d ON
     d.id_caleg = a.id_caleg
 WHERE
-    id_user = '$id'");
+    id_user = '$id' 
+ORDER BY a.id_suara DESC");
 
 $list = [];
 foreach($data as $i => $a){

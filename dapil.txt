@@ -1,0 +1,14 @@
+Dapil I = Kecamatan Koto Tangah
+Dapil II Kecamatan Kuranji
+Dapil III Kecamatan Pauh dan Lubuk Kilangan 
+Dapil IV Kecamatan Bungus Teluk Kabung dan Lubuk Begalung
+Dapil V Kecamatan Padang Selatan dan Padang Timur
+Dapil VI Kecamatan Padang Barat, Padang Utara
+
+data suara per kecamatan
+data suara per kelurahan
+data suara per dapil
+data suara per partai
+data suara per caleg 
+Data suara caleg per dapil
+Data suara partai per dapil
