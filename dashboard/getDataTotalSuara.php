@@ -1,6 +1,6 @@
 <?php
 
-include "koneksi.php";
+include "../koneksi.php";
 
 $suara = $conn->query("SELECT SUM(suara) as suara FROM tb_suara")->fetch_assoc();
 $total = $conn->query("SELECT SUM(jumlah_pemilih) as total FROM tb_kecamatan")->fetch_assoc();

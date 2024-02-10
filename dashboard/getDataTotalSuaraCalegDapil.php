@@ -1,6 +1,6 @@
 <?php
 
-include "koneksi.php";
+include "../koneksi.php";
 
 // suara per caleg dappil 1 1-25
 $suaracalegdapil1 = $conn->query("SELECT SUM(suara) AS total, b.nama_caleg, b.partai FROM tb_suara a LEFT JOIN tb_caleg b ON a.id_caleg = b.id_caleg  WHERE a.id_kecamatan = 11 GROUP BY a.id_caleg ORDER BY total DESC LIMIT 1,25");
