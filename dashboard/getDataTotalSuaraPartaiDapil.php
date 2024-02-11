@@ -25,7 +25,7 @@ foreach($suarapartaidapil2 as $v){
 }
 
 // suara partai per dapil 3
-$suarapartaidapil3 = $conn->query("SELECT SUM(c.suara) as total, a.nama_partai FROM tb_partai AS a LEFT JOIN tb_caleg AS b ON b.partai=a.nama_partai LEFT JOIN tb_suara AS c ON c.id_caleg=b.id_caleg WHERE c.id_kecamatan = 10 AND c.id_kecamatan = 2 GROUP BY a.nama_partai ORDER BY total DESC");
+$suarapartaidapil3 = $conn->query("SELECT SUM(c.suara) as total, a.nama_partai FROM tb_partai AS a LEFT JOIN tb_caleg AS b ON b.partai=a.nama_partai LEFT JOIN tb_suara AS c ON c.id_caleg=b.id_caleg WHERE c.id_kecamatan IN(10, 2) GROUP BY a.nama_partai ORDER BY total DESC");
 $partaidapi3 = [];
 foreach($suarapartaidapil3 as $w){
     $partaidapi3[] = array(
@@ -36,7 +36,7 @@ foreach($suarapartaidapil3 as $w){
 }
 
 // suara partai per dapil 4
-$suarapartaidapil4 = $conn->query("SELECT SUM(c.suara) as total, a.nama_partai FROM tb_partai AS a LEFT JOIN tb_caleg AS b ON b.partai=a.nama_partai LEFT JOIN tb_suara AS c ON c.id_caleg=b.id_caleg WHERE c.id_kecamatan = 1 AND c.id_kecamatan = 3 GROUP BY a.nama_partai ORDER BY total DESC");
+$suarapartaidapil4 = $conn->query("SELECT SUM(c.suara) as total, a.nama_partai FROM tb_partai AS a LEFT JOIN tb_caleg AS b ON b.partai=a.nama_partai LEFT JOIN tb_suara AS c ON c.id_caleg=b.id_caleg WHERE c.id_kecamatan IN(1, 3) GROUP BY a.nama_partai ORDER BY total DESC");
 $partaidapi4 = [];
 foreach($suarapartaidapil4 as $x){
     $partaidapi4[] = array(
@@ -47,7 +47,7 @@ foreach($suarapartaidapil4 as $x){
 }
 
 // suara partai per dapil 5
-$suarapartaidapil5 = $conn->query("SELECT SUM(c.suara) as total, a.nama_partai FROM tb_partai AS a LEFT JOIN tb_caleg AS b ON b.partai=a.nama_partai LEFT JOIN tb_suara AS c ON c.id_caleg=b.id_caleg WHERE c.id_kecamatan = 4 AND c.id_kecamatan = 5 GROUP BY a.nama_partai ORDER BY total DESC");
+$suarapartaidapil5 = $conn->query("SELECT SUM(c.suara) as total, a.nama_partai FROM tb_partai AS a LEFT JOIN tb_caleg AS b ON b.partai=a.nama_partai LEFT JOIN tb_suara AS c ON c.id_caleg=b.id_caleg WHERE c.id_kecamatan IN(4, 5) GROUP BY a.nama_partai ORDER BY total DESC");
 $partaidapi5 = [];
 foreach($suarapartaidapil5 as $y){
     $partaidapi5[] = array(
@@ -58,7 +58,7 @@ foreach($suarapartaidapil5 as $y){
 }
 
 // suara partai per dapil 6
-$suarapartaidapil6 = $conn->query("SELECT SUM(c.suara) as total, a.nama_partai FROM tb_partai AS a LEFT JOIN tb_caleg AS b ON b.partai=a.nama_partai LEFT JOIN tb_suara AS c ON c.id_caleg=b.id_caleg WHERE c.id_kecamatan = 6 AND c.id_kecamatan = 7 GROUP BY a.nama_partai ORDER BY total DESC");
+$suarapartaidapil6 = $conn->query("SELECT SUM(c.suara) as total, a.nama_partai FROM tb_partai AS a LEFT JOIN tb_caleg AS b ON b.partai=a.nama_partai LEFT JOIN tb_suara AS c ON c.id_caleg=b.id_caleg WHERE c.id_kecamatan IN(6, 7) GROUP BY a.nama_partai ORDER BY total DESC");
 $partaidapi6 = [];
 foreach($suarapartaidapil6 as $z){
     $partaidapi6[] = array(

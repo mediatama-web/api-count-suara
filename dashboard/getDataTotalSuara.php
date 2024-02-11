@@ -30,7 +30,7 @@ foreach($suaraKecamatan as $b){
 }
 
 // suara caleg 1-25
-$calegskortertinggi1 = $conn->query("SELECT SUM(a.suara) AS total, b.nama_caleg, b.partai FROM tb_suara a LEFT JOIN tb_caleg b ON a.id_caleg = b.id_caleg GROUP BY b.id_caleg ORDER BY total DESC LIMIT 1,25"); 
+$calegskortertinggi1 = $conn->query("SELECT SUM(a.suara) AS total, b.nama_caleg, b.partai FROM tb_suara a LEFT JOIN tb_caleg b ON a.id_caleg = b.id_caleg GROUP BY b.id_caleg ORDER BY total DESC LIMIT 0,25"); 
 $calegsuara1 = [];
 foreach($calegskortertinggi1 as $c){
     $calegsuara1[] = array(
@@ -41,7 +41,7 @@ foreach($calegskortertinggi1 as $c){
 }
 
 // suara caleg 26-50
-$calegskortertinggi2 = $conn->query("SELECT SUM(a.suara) AS total, b.nama_caleg, b.partai FROM tb_suara a LEFT JOIN tb_caleg b ON a.id_caleg = b.id_caleg GROUP BY b.id_caleg ORDER BY total DESC LIMIT 26,50"); 
+$calegskortertinggi2 = $conn->query("SELECT SUM(a.suara) AS total, b.nama_caleg, b.partai FROM tb_suara a LEFT JOIN tb_caleg b ON a.id_caleg = b.id_caleg GROUP BY b.id_caleg ORDER BY total DESC LIMIT 25,49"); 
 $calegsuara2 = [];
 foreach($calegskortertinggi2 as $d){
     $calegsuara2[] = array(
